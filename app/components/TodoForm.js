@@ -37,6 +37,21 @@ module.exports = React.createClass({
     let text = this.state.value;
     if (text) {
       TodoActions.todoCreate(text);
+      this.setState({
+        value: '',
+      });
     }
-  }
-})
+  },
+});
+
+const styles = StyleSheet.create({
+  header: {
+    marginTop: 21,
+  },
+  textIndent: {
+    height: 40,
+    backgroundColor: '#EEEEEE',
+    padding: 10,
+    fontSize: 16,
+  },
+});
